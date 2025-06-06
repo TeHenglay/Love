@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Valentine Surprise</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body class="bg-pink-100 h-screen flex items-center justify-center text-center px-4">
+    <div id="hearts"></div>
+  <div id="flowers"></div>
+  <div class="bg-white p-8 rounded-2xl shadow-lg max-w-md w-full" style="font-family: 'Lobster', cursive;">
+    <h1 class="text-3xl text-pink-600 mb-4">💖 Enter Your Beautiful Name </h1>
+    <input id="nameInput" type="text" placeholder="Enter a name..."
+      class="w-full px-4 py-2 rounded-md border-2 border-pink-300 focus:outline-none focus:ring-2 focus:ring-pink-500 text-black mb-4">
+    <button onclick="goToQuestion()"
+      class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-2 rounded-full text-lg">
+      Next
+    </button>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+ 
+</body>
+</html>

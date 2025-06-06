@@ -1,0 +1,100 @@
+body {
+  background: linear-gradient(to bottom right, #ffe4e6, #fbcfe8);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: pink;
+  transform: rotate(45deg);
+  animation: float 6s linear infinite;
+  opacity: 0.7;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: pink;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -10px;
+  left: 0;
+}
+
+.heart::after {
+  left: -10px;
+  top: 0;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(45deg);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+#yesButton {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.flower {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background-image: url('images/roseicon.png');
+ /* flower icon */
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: floatFlower linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes floatFlower {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Fade transition */
+.page-transition {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.page-transition.loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-transition.exit {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+/* Fade-out effect */
+body.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}

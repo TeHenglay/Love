@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Valentine Surprise</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="images/png" href="images/favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body class="bg-pink-100 h-screen flex items-center justify-center overflow-hidden relative">
+
+  <!-- Floating Hearts Container -->
+  <div id="hearts"></div>
+  <div id="flowers"></div>
+
+
+  <!-- Pop-up Box -->
+  <div id="popup" class="text-center bg-white p-8 rounded-2xl shadow-2xl z-10">
+    <h1 id="valentineQuestion" class="text-2xl md:text-4xl font-bold text-pink-600 mb-4 animate-bounce" style="font-family: 'Lobster', cursive;">
+  ...
+</h1>
+
+    <div class="flex justify-center gap-6 mt-6">
+      <button id="yesButton" style="font-family: 'JetBrains Mono', monospace;"
+  class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-2 rounded-full">
+  Yes
+</button>
+
+<button id="noButton" style="font-family: 'JetBrains Mono', monospace;"
+  class="bg-gray-300 hover:bg-gray-400 text-black px-6 py-2 rounded-full relative">
+  No
+</button>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+</body>
+</html>
